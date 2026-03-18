@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Wind, Activity, Heart, ArrowRight, Play, CheckCircle2, Sparkles } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 type StepType = 'intro' | 'check-in' | 'exercise' | 'breathing' | 'check-out' | 'completion';
 
@@ -132,6 +133,7 @@ export default function App() {
           {renderStep()}
         </motion.div>
       </AnimatePresence>
+      <SpeedInsights />
     </div>
   );
 }
